@@ -11,6 +11,10 @@ To sustain the event, this project integrates two fundamental technologies:
 *   [**MultiJuicer**](https://pwning.owasp-juice.shop/companion-guide/latest/part4/multi-juicer.html): In a standard CTF, if all participants attack a single Juice Shop instance, one player's actions could crash the server and ruin the contest for everyone else. MultiJuicer solves this by managing traffic and dynamically creating isolated Juice Shop instances within a Kubernetes cluster. Each team or player is assigned an exclusive, sandboxed environment.
 *   [**K3s:**](https://k3s.io) A highly available and extremely lightweight Kubernetes distribution. Instead of relying on resource-heavy virtual machines or complex cloud setups, K3s runs directly on the host machine with minimal overhead. This ensures that maximum CPU and RAM are preserved for the actual CTF container instances, making it the perfect orchestration engine for local labs and bare-metal environments.
 
+<p align="center">
+    <img src="assets/architecture.svg" alt="Architecture" width="40%">
+</p>
+
 ## Prerequisites and Critical Guidelines
 
 Before initiating the deployment, please strictly adhere to the following infrastructure rules:
