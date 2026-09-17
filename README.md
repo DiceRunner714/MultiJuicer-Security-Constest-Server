@@ -1,6 +1,6 @@
 # MultiJuicer-Security-Constest-Server
 
-[Leia em Português](README-pt.md)
+[Leia em Português](lang/ptbr.md)
 
 Automated deployment of OWASP MultiJuicer on a local K3s cluster for hosting cybersecurity CTF events.
 
@@ -15,7 +15,7 @@ To sustain the event, this project integrates two fundamental technologies:
 *   [**K3s**](https://k3s.io): A highly available and extremely lightweight Kubernetes distribution. Instead of relying on resource-heavy virtual machines or complex cloud setups, K3s runs directly on the host machine with minimal overhead. This ensures that maximum CPU and RAM are preserved for the actual CTF container instances, making it the perfect orchestration engine for local labs and bare-metal environments.
 
 <p align="center">
-    <img src="assets/architecture.svg" alt="Architecture" width="40%">
+    <img src="assets/architecture.svg" alt="Architecture" width="60%">
 </p>
 
 ## Prerequisites and Critical Guidelines
