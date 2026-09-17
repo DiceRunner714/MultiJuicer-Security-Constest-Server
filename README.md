@@ -1,7 +1,10 @@
 # MultiJuicer-Security-Constest-Server
+
+[Leia em Português](README-pt.md)
+
 Automated deployment of OWASP MultiJuicer on a local K3s cluster for hosting cybersecurity CTF events.
 
-The objective of this repository is to provide a simple, automated, and ready-to-go environment for hosting local cybersecurity Capture The Flag (CTF) competitions. Through a single script, you can deploy the complete infrastructure required to support multiple simultaneous players.
+The objective of this repository is to provide a simple, automated, and ready-to-go environment for hosting local cybersecurity Capture The Flag (CTF) competitions. Through a single script, you can deploy the complete infrastructure required to support multiple teams (OWASP Juice Shop instances).
 
 ## Architecture Overview
 
@@ -9,7 +12,7 @@ To sustain the event, this project integrates two fundamental technologies:
 
 *   [**OWASP Juice Shop**](https://owasp.org/projects/juice-shop): A modern and sophisticated insecure web application. It is intentionally developed with numerous security flaws (such as SQL Injection, XSS, and broken authentication) to be used for cybersecurity training and competitions.
 *   [**MultiJuicer**](https://pwning.owasp-juice.shop/companion-guide/latest/part4/multi-juicer.html): In a standard CTF, if all participants attack a single Juice Shop instance, one player's actions could crash the server and ruin the contest for everyone else. MultiJuicer solves this by managing traffic and dynamically creating isolated Juice Shop instances within a Kubernetes cluster. Each team or player is assigned an exclusive, sandboxed environment.
-*   [**K3s:**](https://k3s.io) A highly available and extremely lightweight Kubernetes distribution. Instead of relying on resource-heavy virtual machines or complex cloud setups, K3s runs directly on the host machine with minimal overhead. This ensures that maximum CPU and RAM are preserved for the actual CTF container instances, making it the perfect orchestration engine for local labs and bare-metal environments.
+*   [**K3s**](https://k3s.io): A highly available and extremely lightweight Kubernetes distribution. Instead of relying on resource-heavy virtual machines or complex cloud setups, K3s runs directly on the host machine with minimal overhead. This ensures that maximum CPU and RAM are preserved for the actual CTF container instances, making it the perfect orchestration engine for local labs and bare-metal environments.
 
 <p align="center">
     <img src="assets/architecture.svg" alt="Architecture" width="40%">
